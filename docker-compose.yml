@@ -9,11 +9,11 @@ services:
       - SERVER_WORLD=${SERVER_WORLD:-Dedicated}
       - SERVER_NAME=${SERVER_NAME}
     volumes:
-      - worlds:/home/steam/.config/unity3d/IronGate/Valheim/worlds:rw
+      - valheim:/home/steam/.config/unity3d/IronGate/Valheim:rw
     ports:
-      - 2456:2456
-      - 2457:2457
-      - 2458:2458
+      - 0.0.0.0:2456:2456
+      - 0.0.0.0:2457:2457
+      - 0.0.0.0:2458:2458
 
 volumes:
-  worlds:
+  valheim:
